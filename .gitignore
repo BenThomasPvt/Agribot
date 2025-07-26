@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.db
+*.sqlite3
+*.h5
+*.wav
+*.npz
+
+# Virtual environments
+venv/
+env/
+
+# System
+.DS_Store
+
+# Django migrations
+*/migrations/__pycache__/
+*.log
+
+# VSCode settings
+.vscode/

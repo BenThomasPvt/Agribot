@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Agriculture Helper Chatbot</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <h2>🌾 AgriBot – Your Agriculture Assistant</h2>
+
+    <div id="chat-box"></div>
+
+    <div class="input-area">
+        <input type="text" id="query" placeholder="Ask about a crop or disease..." autofocus />
+        <button onclick="sendQuery()">Send</button>
+    </div>
+
+    <script>
+        const input = document.getElementById("query");
+        const box = document.getElementById("chat-box");
+
+        function sendQuery() {
+            const query = input.value.trim();
+            if (!query) return;
+
+            fetch(`/get-response/?query=${encodeURIComponent(query)}`)
+                .then(res => res.text())
+                .then(data => {
+                    box.innerHTML += `<div class="chat-bubble user"><strong>You:</strong> ${query}</div>`;
+                    box.innerHTML += `<div class="chat-bubble bot"><strong>Bot:</strong> ${data}</div>`;
+                    input.value = '';
+                    input.focus();
+                    box.scrollTop = box.scrollHeight;
+                });
+        }
+
+        // Send message on Enter key
+        input.addEventListener("keydown", function(event) {
+            if (event.key === "Enter") {
+                sendQuery();
+            }
+        });
+
+        // Auto focus input when page loads
+        window.onload = () => {
+            input.focus();
+        };
+    </script>
+</body>
+</html>

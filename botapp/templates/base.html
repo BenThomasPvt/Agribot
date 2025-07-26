@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}AgriBot{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <style>
+        nav {
+            background-color: #2e7d32;
+            padding: 10px 20px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        nav a {
+            color: white;
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div><strong>🌾 AgriBot</strong></div>
+        <div>
+            <a href="/">Home</a>
+            <a href="/chat/">Chatbot</a>
+            <a href="/diagnose/">Image Detection</a>
+            <a href="/voice/">Voice Chat</a>
+            <a href="/about/">About</a>
+            <a href="/contact/">Contact</a>
+        </div>
+    </nav>
+
+    {% block content %}{% endblock %}
+</body>
+</html>
