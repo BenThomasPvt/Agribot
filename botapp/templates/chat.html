@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}AgriBot Chatbot{% endblock %}
+
+{% block content %}
+
+<div class="chat-page">
+
+    <h2>🌾 AgriBot – Your Agriculture Assistant</h2>
+
+    <div id="chat-box"></div>
+
+    <div class="input-area">
+        <input
+            type="text"
+            id="query"
+            placeholder="Ask about agriculture..."
+            autofocus
+        />
+
+        <button onclick="sendQuery()">Send</button>
+    </div>
+
+</div>
+
+<script>
+    const input = document.getElementById("query");
+    const box = document.getElementById("chat-box");
+
+    function sendQuery() {
+
+        const query = input.value.trim();
+
+        if (!query) return;
+
+        // Show user's message immediately
+        box.innerHTML += `
+            <div class="chat-bubble user">
+                <strong>You:</strong> ${query}
+            </div>
+        `;
+
+        // Clear input
+        input.value = '';
+
+        // Show temporary loading message
+        box.innerHTML += `
+            <div class="chat-bubble bot" id="loading">
+                <strong>AgriBot:</strong> Thinking...
+            </div>
+        `;
+
+        box.scrollTop = box.scrollHeight;
+
+        fetch(`/get-response/?query=${encodeURIComponent(query)}`)
+            .then(res => res.text())
+            .then(data => {
+
+                const loading = document.getElementById("loading");
+
+                if (loading) {
+                    loading.innerHTML = `
+                        <strong>AgriBot:</strong> ${data}
+                    `;
+                    loading.removeAttribute("id");
+                }
+
+                input.focus();
+                box.scrollTop = box.scrollHeight;
+            })
+            .catch(error => {
+
+                const loading = document.getElementById("loading");
+
+                if (loading) {
+                    loading.innerHTML = `
+                        <strong>AgriBot:</strong>
+                        Sorry, something went wrong. Please try again.
+                    `;
+                    loading.removeAttribute("id");
+                }
+
+                console.error(error);
+            });
+    }
+
+    // Send message when Enter is pressed
+    input.addEventListener("keydown", function(event) {
+
+        if (event.key === "Enter") {
+            sendQuery();
+        }
+
+    });
+
+    // Focus input when page loads
+    window.onload = () => {
+        input.focus();
+    };
+</script>
+
+{% endblock %}

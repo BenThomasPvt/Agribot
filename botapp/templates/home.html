@@ -1,0 +1,158 @@
+{% extends "base.html" %}
+
+{% block title %}Home - AgriBot{% endblock %}
+
+{% block content %}
+
+<div class="home-page">
+
+    <!-- Hero -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="hero-icon">🌾</div>
+
+            <h1>
+                Welcome to <span>AgriBot</span>
+            </h1>
+
+            <p class="hero-subtitle">
+                Your AI-powered agriculture learning assistant.
+            </p>
+
+            <p class="hero-description">
+                AgriBot uses Retrieval-Augmented Generation (RAG)
+                to retrieve information from an agricultural
+                knowledge base and provide clear,
+                beginner-friendly answers.
+            </p>
+
+            <a href="/chat/" class="primary-button">
+                💬 Try AgriBot
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+
+        <h2>What can AgriBot do?</h2>
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+
+                <div class="feature-icon">📚</div>
+
+                <h3>Learn Agriculture</h3>
+
+                <p>
+                    Ask questions about fundamental agricultural
+                    concepts, crops, soil, farming practices
+                    and more.
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <div class="feature-icon">🤖</div>
+
+                <h3>RAG-Powered Answers</h3>
+
+                <p>
+                    AgriBot retrieves relevant information from
+                    its agricultural reference material before
+                    generating an answer.
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <div class="feature-icon">🔎</div>
+
+                <h3>Source-Aware</h3>
+
+                <p>
+                    Answers include references to the pages used
+                    from the agriculture knowledge base.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+
+        <h2>How it works</h2>
+
+        <div class="pipeline">
+
+            <div class="pipeline-step">
+                <span>📄</span>
+                <strong>Agriculture PDF</strong>
+                <small>Knowledge source</small>
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div class="pipeline-step">
+                <span>✂️</span>
+                <strong>Chunking</strong>
+                <small>Documents split into sections</small>
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div class="pipeline-step">
+                <span>🔢</span>
+                <strong>Embeddings</strong>
+                <small>Text converted to vectors</small>
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div class="pipeline-step">
+                <span>🗄️</span>
+                <strong>ChromaDB</strong>
+                <small>Semantic retrieval</small>
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div class="pipeline-step">
+                <span>🤖</span>
+                <strong>Groq LLM</strong>
+                <small>Answer generation</small>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CTA -->
+    <section class="home-cta">
+
+        <h2>Ready to learn?</h2>
+
+        <p>
+            Ask AgriBot a question and explore agriculture
+            using your knowledge base.
+        </p>
+
+        <a href="/chat/" class="primary-button">
+            🌱 Start Learning
+        </a>
+
+    </section>
+
+</div>
+
+{% endblock %}

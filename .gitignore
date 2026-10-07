@@ -1,0 +1,49 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*.db
+*.sqlite3
+*.h5
+*.wav
+*.npz
+*.log
+
+# =========================
+# Virtual environments
+# =========================
+venv/
+env/
+rag_env/
+
+# =========================
+# Environment / Secrets
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# ChromaDB / Generated RAG data
+# =========================
+chroma_db/
+.cache/
+*.bin
+
+# =========================
+# System
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Django migrations cache
+# =========================
+*/migrations/__pycache__/
+
+# =========================
+# VS Code / IDE
+# =========================
+.vscode/
+.idea/

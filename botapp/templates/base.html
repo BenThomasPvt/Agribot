@@ -1,0 +1,91 @@
+{% load static %}
+
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>{% block title %}AgriBot{% endblock %}</title>
+
+<link rel="stylesheet" href="{% static 'style.css' %}">
+
+<style>
+    nav {
+        background-color: #2e7d32;
+        padding: 12px 25px;
+        color: white;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    nav .brand {
+        font-size: 20px;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+
+    nav .nav-links {
+        display: flex;
+        align-items: center;
+    }
+
+    nav a {
+        color: white;
+        margin-left: 22px;
+
+        text-decoration: none;
+        font-weight: bold;
+
+        transition: opacity 0.2s ease;
+    }
+
+    nav a:hover {
+        opacity: 0.8;
+        text-decoration: underline;
+    }
+
+    @media (max-width: 700px) {
+        nav {
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        nav .nav-links {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav a {
+            margin: 5px 10px;
+        }
+    }
+</style>
+
+</head> <body>
+<nav>
+
+    <div class="brand">
+        🌾 AgriBot
+    </div>
+
+    <div class="nav-links">
+
+        <a href="/">Home</a>
+
+        <a href="/chat/">Chatbot</a>
+
+        <a href="/about/">About</a>
+
+        <a href="/contact/">Contact</a>
+
+    </div>
+
+</nav>
+
+{% block content %}
+{% endblock %}
+
+</body> </html>

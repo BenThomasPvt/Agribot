@@ -1,0 +1,129 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Hello", "Hi", "Hey", "Is anyone there?"],
+      "responses": ["Hi there! How can I assist you with farming today?"]
+    },
+    {
+      "tag": "apple_cedar_apple_rust",
+      "patterns": ["Apple Cedar apple rust", "Cedar apple rust on apple"],
+      "responses": ["Rust can be controlled by spraying plants with a copper solution (0.5 to 2.0 oz/ gallon of water) at least four times between late August and late October."]
+    },
+    {
+      "tag": "apple_black_rot",
+      "patterns": ["Apple Black rot", "Black rot in apple"],
+      "responses": ["Spray with captan or sulfur while disease in early stages."]
+    },
+    {
+      "tag": "apple_apple_scab",
+      "patterns": ["Apple scab disease", "Apple with scab"],
+      "responses": ["For best control, spray liquid copper soap early, two weeks before symptoms normally appear. Alternatively, begin applications when disease first appears, and repeat at 7 to10 day intervals up to blossom drop."]
+    },
+    {
+      "tag": "corn_northern_leaf_blight",
+      "patterns": ["Corn Northern Leaf Blight", "Northern blight in maize"],
+      "responses": ["Monogenic and polygenic resistance can act together to reduce the severity of NCLB. Crop rotation and tillage practices may be helpful in some cases."]
+    },
+    {
+      "tag": "corn_common_rust",
+      "patterns": ["Corn Common rust", "Rust in maize"],
+      "responses": ["Spray mancozeb 2.5 g/I as soon as pustules appear."]
+    },
+    {
+      "tag": "corn_cercospora_leaf_spot",
+      "patterns": ["Corn Cercospora leaf spot", "Gray leaf spot in maize"],
+      "responses": ["Combination of azoxystrobin and propiconazole, prothioconazole and trifloxystrobin."]
+    },
+    {
+      "tag": "tomato_bacterial_spot",
+      "patterns": ["Tomato bacterial spot", "Spot disease in tomato"],
+      "responses": ["Use copper fungicides, or copper plus mancozeb. And grow healthy plants from seed free from infection."]
+    },
+    {
+      "tag": "tomato_early_blight",
+      "patterns": ["Tomato early blight", "Early blight in tomato"],
+      "responses": ["Combination of copper sulfate and lime."]
+    },
+    {
+      "tag": "tomato_late_blight",
+      "patterns": ["Tomato late blight", "Late blight in tomato"],
+      "responses": ["Use a copper-based fungicide (mix 2 ounces of fungicide with a gallon of water) every 6 or 7 days following a watering."]
+    },
+    {
+      "tag": "tomato_leaf_mold",
+      "patterns": ["Tomato leaf mold", "Leaf mold in tomato"],
+      "responses": ["Use chlorothalonil, menab, mancozeb and copper formulations."]
+    },
+    {
+      "tag": "tomato_septoria_leaf_spot",
+      "patterns": ["Tomato septoria leaf spot", "Septoria spot in tomato"],
+      "responses": ["Copper and potassium bicarbonate will help contain the fungal disease and keep it from spreading."]
+    },
+    {
+      "tag": "tomato_spider_mites",
+      "patterns": ["Tomato spider mites", "Two-spotted spider mite on tomato"],
+      "responses": ["Use spiromesifen (Oberon 2SC), insecticidal soap (M-Pede), or neem oil (Trilogy)."]
+    },
+    {
+      "tag": "tomato_target_spot",
+      "patterns": ["Tomato target spot", "Target spot in tomato"],
+      "responses": ["Use chlorothalonil, copper oxychloride or mancozeb."]
+    },
+    {
+      "tag": "tomato_mosaic_virus",
+      "patterns": ["Tomato mosaic virus", "Mosaic virus in tomato"],
+      "responses": ["Soak seeds in a 10% solution of trisodium phosphate (Na3PO4) for at least 15 minutes."]
+    },
+    {
+      "tag": "tomato_yellow_leaf_curl",
+      "patterns": ["Tomato yellow leaf curl virus", "Yellow leaf curl disease"],
+      "responses": ["Use insecticides of the pyrethroid family as soil drenches or spray during the seeding stage to reduce whiteflies."]
+    },
+    {
+      "tag": "potato_early_blight",
+      "patterns": ["Potato early blight", "Early blight in potato"],
+      "responses": ["Trichoderma harzianum and Pseudomonas fluorescens are effective against the disease."]
+    },
+    {
+      "tag": "potato_late_blight",
+      "patterns": ["Potato late blight", "Late blight in potato"],
+      "responses": ["Spray mancozeb at 0.25% followed by cymoxanil + mancozeb."]
+    },
+    {
+      "tag": "grape_black_rot",
+      "patterns": ["Grape black rot", "Black rot in grape"],
+      "responses": ["Use Buscalid 25.2%WG and Pyraclostrobin 12.8%WG (or) fosetyl 80.0%WG."]
+    },
+    {
+      "tag": "grape_black_measles",
+      "patterns": ["Grape black measles", "Esca in grape"],
+      "responses": ["Use Chlorantranilprole + lambda cyhalothrin (0.5ml/I) or cypermethrin (1ml/l)."]
+    },
+    {
+      "tag": "grape_leaf_blight",
+      "patterns": ["Grape leaf blight", "Isariopsis leaf spot in grape"],
+      "responses": ["Apply Ferrous sulphate Fe19%."]
+    },
+    {
+      "tag": "rice",
+      "patterns": ["rice", "Tell me about rice", "Rice farming details"],
+      "responses": ["Rainfall: 1200mm, Soil: Clay, Irrigation: Canal"]
+    },
+    {
+      "tag": "cotton",
+      "patterns": ["cotton", "Tell me about cotton", "Cotton crop info"],
+      "responses": ["Rainfall: 850mm, Soil: Black, Irrigation: Drip"]
+    },
+    {
+      "tag": "wheat",
+      "patterns": ["wheat", "Wheat details", "grow wheat"],
+      "responses": ["Rainfall: 700mm, Soil: Loamy, Irrigation: Tube well"]
+    },
+    {
+      "tag": "unknown",
+      "patterns": [],
+      "responses": ["I'm not trained to answer that. Please ask a crop or disease-related question."]
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{% extends "base.html" %}
+
+{% block title %}About - AgriBot{% endblock %}
+
+{% block content %}
+
+<section class="content-page">
+
+    <div class="page-header">
+        <span>🌾</span>
+        <h1>About AgriBot</h1>
+        <p>RAG-powered agriculture knowledge assistant</p>
+    </div>
+
+
+    <div class="content-card">
+
+        <h2>Project Overview</h2>
+
+        <p>
+            AgriBot is an AI-powered agriculture assistant designed
+            to help beginners understand fundamental concepts in
+            agriculture.
+        </p>
+
+        <p>
+            Instead of relying only on predefined chatbot responses,
+            AgriBot uses Retrieval-Augmented Generation (RAG).
+            The system retrieves relevant information from an
+            agricultural reference document and provides that
+            information to a Large Language Model (LLM), which
+            generates the final response.
+        </p>
+
+    </div>
+
+
+    <div class="content-card">
+
+        <h2>Why RAG?</h2>
+
+        <p>
+            Large Language Models can generate useful answers, but
+            they may also produce information that is inaccurate or
+            unrelated to a specific knowledge source.
+        </p>
+
+        <p>
+            RAG addresses this by retrieving relevant information
+            before generating an answer.
+        </p>
+
+        <div class="architecture">
+
+            <div>User Question</div>
+            <span>↓</span>
+
+            <div>Query Embedding</div>
+            <span>↓</span>
+
+            <div>ChromaDB Retrieval</div>
+            <span>↓</span>
+
+            <div>Relevant Document Chunks</div>
+            <span>↓</span>
+
+            <div>Context + Question</div>
+            <span>↓</span>
+
+            <div>Groq LLM</div>
+            <span>↓</span>
+
+            <div>Grounded Answer + Sources</div>
+
+        </div>
+
+    </div>
+
+
+    <div class="content-card">
+
+        <h2>Technology Stack</h2>
+
+        <div class="tech-grid">
+
+            <div>
+                <strong>Backend</strong>
+                <p>Django / Python</p>
+            </div>
+
+            <div>
+                <strong>RAG</strong>
+                <p>ChromaDB</p>
+            </div>
+
+            <div>
+                <strong>Document Processing</strong>
+                <p>PyMuPDF</p>
+            </div>
+
+            <div>
+                <strong>LLM</strong>
+                <p>Groq API</p>
+            </div>
+
+            <div>
+                <strong>Frontend</strong>
+                <p>HTML / CSS / JavaScript</p>
+            </div>
+
+            <div>
+                <strong>Vector Embeddings</strong>
+                <p>ChromaDB Embedding Function</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="content-card">
+
+        <h2>Current Features</h2>
+
+        <ul class="project-list">
+            <li>📚 PDF-based agricultural knowledge base</li>
+            <li>🔎 Semantic document retrieval</li>
+            <li>🤖 LLM-powered responses</li>
+            <li>📑 Source/page references</li>
+            <li>💬 Interactive web chatbot</li>
+        </ul>
+
+    </div>
+
+
+    <div class="content-card">
+
+        <h2>Future Improvements</h2>
+
+        <ul class="project-list">
+            <li>Support for multiple agricultural documents</li>
+            <li>Document upload and automatic ingestion</li>
+            <li>Improved chunking strategies</li>
+            <li>RAG evaluation and retrieval metrics</li>
+            <li>Conversation memory</li>
+            <li>Agentic RAG workflows</li>
+        </ul>
+
+    </div>
+
+</section>
+
+{% endblock %}
